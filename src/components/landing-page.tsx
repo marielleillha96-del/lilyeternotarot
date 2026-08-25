@@ -246,7 +246,10 @@ function ServiceCard({
   const cardPrice = service.prices.length > 1 ? `A partir de ${service.prices[0].value}` : service.prices[0].value;
 
   return (
-    <article className="group h-full overflow-hidden rounded-[16px] border border-amber-300/12 bg-white/5 shadow-[0_20px_70px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-1 hover:border-amber-300/25 hover:bg-white/[0.07]">
+    <article
+      id={service.slug}
+      className="group h-full overflow-hidden rounded-[16px] border border-amber-300/12 bg-white/5 shadow-[0_20px_70px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-1 hover:border-amber-300/25 hover:bg-white/[0.07]"
+    >
       <button
         type="button"
         className="flex h-full w-full flex-col text-left"
@@ -342,7 +345,8 @@ function ServiceModal({
 
   if (!service) return null;
 
-  const message = `Olá! Quero consultar a leitura "${service.title}" no Eterno Tarot.`;
+  const serviceLink = new URL(`#${service.slug}`, site.siteUrl).toString();
+  const message = `Olá! Quero consultar a leitura "${service.title}", que eu encontrei no site! ${serviceLink}`;
 
   return (
     <div className="fixed inset-0 z-[60] flex items-start justify-center overflow-y-auto bg-slate-950/85 p-3 backdrop-blur-md sm:items-center sm:p-6">
