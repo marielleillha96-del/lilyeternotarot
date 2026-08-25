@@ -17,7 +17,7 @@ const body = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | Tarot online, consulta de tarot e tarot do amor`,
+    default: site.tagline,
     template: `%s | ${site.shortName}`,
   },
   description: site.description,
@@ -25,8 +25,13 @@ export const metadata: Metadata = {
     canonical: site.canonicalPath,
   },
   metadataBase: new URL(site.siteUrl),
+  icons: {
+    icon: site.heroImage,
+    shortcut: site.heroImage,
+    apple: site.heroImage,
+  },
   openGraph: {
-    title: site.name,
+    title: site.tagline,
     description: site.description,
     url: site.siteUrl,
     siteName: site.shortName,
@@ -36,13 +41,13 @@ export const metadata: Metadata = {
         url: site.heroImage,
         width: 1200,
         height: 630,
-        alt: site.shortName,
+        alt: site.tagline,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: site.name,
+    title: site.tagline,
     description: site.description,
     images: [site.heroImage],
   },
