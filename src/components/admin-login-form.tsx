@@ -13,8 +13,8 @@ function Icon({ className = 'h-4 w-4' }: { className?: string }) {
 
 export default function AdminLoginForm() {
   const router = useRouter();
-  const [username, setUsername] = useState('lily');
-  const [password, setPassword] = useState('lilytarot');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -51,10 +51,12 @@ export default function AdminLoginForm() {
       <div className="space-y-2">
         <label className="block text-xs uppercase tracking-[0.3em] text-stone-400">Usuário</label>
         <input
+          name="admin-username"
           value={username}
           onChange={(event) => setUsername(event.target.value)}
+          placeholder="Digite seu usuário"
           className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-sm text-white outline-none transition focus:border-amber-300/35"
-          autoComplete="username"
+          autoComplete="off"
         />
       </div>
 
@@ -62,10 +64,12 @@ export default function AdminLoginForm() {
         <label className="block text-xs uppercase tracking-[0.3em] text-stone-400">Senha</label>
         <input
           type="password"
+          name="admin-password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
+          placeholder="Digite sua senha"
           className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-sm text-white outline-none transition focus:border-amber-300/35"
-          autoComplete="current-password"
+          autoComplete="new-password"
         />
       </div>
 
@@ -82,4 +86,3 @@ export default function AdminLoginForm() {
     </form>
   );
 }
-

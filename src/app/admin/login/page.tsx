@@ -31,7 +31,6 @@ export default async function AdminLoginPage() {
 
             <div className="grid gap-3 text-sm text-stone-300 sm:grid-cols-2">
               <div className="rounded-[22px] border border-white/8 bg-white/5 p-4">Usuário: lily</div>
-              <div className="rounded-[22px] border border-white/8 bg-white/5 p-4">Senha: lilytarot</div>
             </div>
           </section>
 
