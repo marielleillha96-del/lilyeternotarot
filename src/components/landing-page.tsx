@@ -246,10 +246,10 @@ function ServiceCard({
   const cardPrice = service.prices.length > 1 ? `A partir de ${service.prices[0].value}` : service.prices[0].value;
 
   return (
-    <article className="group overflow-hidden rounded-[16px] border border-amber-300/12 bg-white/5 shadow-[0_20px_70px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-1 hover:border-amber-300/25 hover:bg-white/[0.07]">
+    <article className="group h-full overflow-hidden rounded-[16px] border border-amber-300/12 bg-white/5 shadow-[0_20px_70px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-1 hover:border-amber-300/25 hover:bg-white/[0.07]">
       <button
         type="button"
-        className="block w-full text-left"
+        className="flex h-full w-full flex-col text-left"
         onClick={() => onOpen(service)}
         data-service-id={service.id}
         data-service-name={service.title}
@@ -283,12 +283,14 @@ function ServiceCard({
             </p>
           </div>
         </div>
-        <div className="space-y-2 p-2 sm:p-3">
-          <h3 className="font-display text-[15px] leading-[1.05] text-white sm:hidden">{service.title}</h3>
+        <div className="flex flex-1 flex-col gap-2 p-2 sm:p-3">
+          <h3 className="font-display text-[13px] leading-[1.05] text-white line-clamp-2 sm:hidden">
+            {service.title}
+          </h3>
           <p className="text-[11px] leading-5 text-stone-200/82 sm:hidden">
             {service.summary}
           </p>
-          <span className="inline-flex rounded-full bg-amber-300 px-3 py-1 text-[11px] font-extrabold text-slate-950 sm:hidden">
+          <span className="mt-auto inline-flex self-start rounded-full bg-amber-300 px-3 py-1 text-[11px] font-extrabold text-slate-950 sm:hidden">
             {cardPrice}
           </span>
           <div className="hidden flex-wrap gap-1.5 sm:flex">
