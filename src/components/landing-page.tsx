@@ -246,7 +246,7 @@ function ServiceCard({
   const cardPrice = service.prices.length > 1 ? `A partir de ${service.prices[0].value}` : service.prices[0].value;
 
   return (
-    <article className="group overflow-hidden rounded-[18px] border border-amber-300/12 bg-white/5 shadow-[0_20px_70px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-1 hover:border-amber-300/25 hover:bg-white/[0.07]">
+    <article className="group overflow-hidden rounded-[16px] border border-amber-300/12 bg-white/5 shadow-[0_20px_70px_rgba(0,0,0,0.35)] transition duration-300 hover:-translate-y-1 hover:border-amber-300/25 hover:bg-white/[0.07]">
       <button
         type="button"
         className="block w-full text-left"
@@ -255,7 +255,7 @@ function ServiceCard({
         data-service-name={service.title}
         data-price={service.prices[0]?.value || ''}
       >
-        <div className="relative aspect-[4/4.7] overflow-hidden">
+        <div className="relative aspect-[4/4.1] overflow-hidden sm:aspect-[4/4.7]">
           <Image
             src={service.image}
             alt={service.title}
@@ -264,18 +264,18 @@ function ServiceCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/15 to-transparent" />
-          <div className="absolute left-3 top-3 rounded-full border border-white/12 bg-slate-950/70 px-2.5 py-1 text-[10px] uppercase tracking-[0.24em] text-amber-100">
+          <div className="absolute left-2.5 top-2.5 rounded-full border border-white/12 bg-slate-950/70 px-2.5 py-1 text-[9px] uppercase tracking-[0.24em] text-amber-100 sm:left-3 sm:top-3 sm:text-[10px]">
             {service.category}
           </div>
-          <div className="absolute bottom-3 left-3 right-3 space-y-1.5">
+          <div className="absolute bottom-2 left-2 right-2 space-y-1.5 sm:bottom-3 sm:left-3 sm:right-3">
             <div className="flex items-end justify-between gap-2">
-              <h3 className="max-w-[66%] font-display text-[15px] leading-[1.02] text-white md:text-[17px]">{service.title}</h3>
-              <span className="shrink-0 rounded-full bg-amber-300 px-3.5 py-1.5 text-[12px] font-extrabold text-slate-950 shadow-[0_10px_24px_rgba(214,174,71,0.18)] md:text-[13px]">
+              <h3 className="max-w-[66%] font-display text-[12px] leading-[1.02] text-white sm:text-[15px] md:text-[17px]">{service.title}</h3>
+              <span className="shrink-0 rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-extrabold text-slate-950 shadow-[0_10px_24px_rgba(214,174,71,0.18)] sm:px-3.5 sm:py-1.5 sm:text-[12px] md:text-[13px]">
                 {cardPrice}
               </span>
             </div>
             <p
-              className={`max-w-[92%] text-[12px] leading-5 text-stone-200/82 md:text-[13px] ${
+              className={`max-w-[92%] text-[10px] leading-4 text-stone-200/82 sm:text-[12px] sm:leading-5 md:text-[13px] ${
                 showSummary ? 'line-clamp-2' : 'hidden sm:line-clamp-2 sm:block'
               }`}
             >
@@ -283,8 +283,8 @@ function ServiceCard({
             </p>
           </div>
         </div>
-        <div className="space-y-2 p-2.5">
-          <div className="flex flex-wrap gap-1.5">
+        <div className="space-y-2 p-2">
+          <div className="hidden flex-wrap gap-1.5 sm:flex">
             {service.includes.slice(0, 2).map((item) => (
               <span
                 key={item}
@@ -294,7 +294,7 @@ function ServiceCard({
               </span>
             ))}
           </div>
-          <div className="flex items-center justify-between">
+          <div className="hidden items-center justify-between sm:flex">
             <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-amber-100">
               Escolher esta consulta <Icon name="arrow" className="h-3.5 w-3.5" />
             </span>
@@ -642,7 +642,7 @@ export default function LandingPage({
             description="Cada card reúne nome, imagem, descrição, preço e um caminho direto para a consulta. No modal, você encontra os detalhes da leitura e o que está incluso."
           />
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
             {featuredServices.map((service) => (
               <ServiceCard
                 key={service.id}
@@ -682,7 +682,7 @@ export default function LandingPage({
           ) : null}
 
           {showMoreServices ? (
-            <div id="more-services" className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div id="more-services" className="mt-8 grid grid-cols-2 gap-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
               {extraServices.map((service) => (
                 <ServiceCard
                   key={service.id}
