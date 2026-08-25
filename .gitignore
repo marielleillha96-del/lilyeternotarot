@@ -13,3 +13,4 @@ pnpm-debug.log*
 AGENTS.md
 CLAUDE.md
 lily.jpeg
+!public/lily.jpeg
