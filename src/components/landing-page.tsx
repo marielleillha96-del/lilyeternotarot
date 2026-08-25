@@ -267,7 +267,7 @@ function ServiceCard({
           <div className="absolute left-2.5 top-2.5 rounded-full border border-white/12 bg-slate-950/70 px-2.5 py-1 text-[9px] uppercase tracking-[0.24em] text-amber-100 sm:left-3 sm:top-3 sm:text-[10px]">
             {service.category}
           </div>
-          <div className="absolute bottom-2 left-2 right-2 space-y-1.5 sm:bottom-3 sm:left-3 sm:right-3">
+          <div className="absolute bottom-2 left-2 right-2 hidden space-y-1.5 sm:bottom-3 sm:left-3 sm:right-3 sm:block">
             <div className="flex items-end justify-between gap-2">
               <h3 className="max-w-[66%] font-display text-[12px] leading-[1.02] text-white sm:text-[15px] md:text-[17px]">{service.title}</h3>
               <span className="shrink-0 rounded-full bg-amber-300 px-2.5 py-1 text-[10px] font-extrabold text-slate-950 shadow-[0_10px_24px_rgba(214,174,71,0.18)] sm:px-3.5 sm:py-1.5 sm:text-[12px] md:text-[13px]">
@@ -283,7 +283,16 @@ function ServiceCard({
             </p>
           </div>
         </div>
-        <div className="space-y-2 p-2">
+        <div className="space-y-2 p-2 sm:p-3">
+          <div className="flex items-start justify-between gap-2 sm:hidden">
+            <h3 className="font-display text-[15px] leading-[1.05] text-white">{service.title}</h3>
+            <span className="shrink-0 rounded-full bg-amber-300 px-3 py-1 text-[11px] font-extrabold text-slate-950">
+              {cardPrice}
+            </span>
+          </div>
+          <p className="text-[11px] leading-5 text-stone-200/82 sm:hidden">
+            {service.summary}
+          </p>
           <div className="hidden flex-wrap gap-1.5 sm:flex">
             {service.includes.slice(0, 2).map((item) => (
               <span
@@ -551,9 +560,11 @@ export default function LandingPage({
   const [activeService, setActiveService] = useState<ActiveService>(null);
   const [activeTestimonial, setActiveTestimonial] = useState<Testimonial | null>(null);
   const [showMoreServices, setShowMoreServices] = useState(false);
+  const [showMoreTestimonials, setShowMoreTestimonials] = useState(false);
   const [showMobileSummaries, setShowMobileSummaries] = useState(true);
 
-  const testimonialCards = testimonials.slice(0, 8);
+  const testimonialCards = testimonials.slice(0, 4);
+  const extraTestimonials = testimonials.slice(4);
   const featuredServices = services.slice(0, 8);
   const extraServices = services.slice(8);
 
@@ -804,6 +815,42 @@ export default function LandingPage({
               </button>
             ))}
           </div>
+          {extraTestimonials.length ? (
+            <div className="mt-6 flex justify-center">
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/8"
+                onClick={() => setShowMoreTestimonials((value) => !value)}
+                aria-expanded={showMoreTestimonials}
+                aria-controls="more-testimonials"
+              >
+                {showMoreTestimonials ? 'Ver menos depoimentos' : 'Ver mais depoimentos'}
+                <Icon name="arrow" className={`h-4 w-4 transition ${showMoreTestimonials ? 'rotate-90' : 'rotate-90'}`} />
+              </button>
+            </div>
+          ) : null}
+          {showMoreTestimonials ? (
+            <div id="more-testimonials" className="mt-6 flex gap-4 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {extraTestimonials.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => setActiveTestimonial(item)}
+                  className="group min-w-[220px] max-w-[220px] overflow-hidden rounded-[20px] border border-white/8 bg-white/5 text-left transition hover:-translate-y-1 hover:border-amber-300/20 hover:bg-white/[0.07] sm:min-w-[240px] sm:max-w-[240px]"
+                  aria-label={`Abrir feedback ${item.title}`}
+                >
+                  <div className="relative aspect-[4/5]">
+                    <Image src={item.image} alt={item.title} fill className="object-cover" sizes="260px" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
+                  </div>
+                  <div className="flex items-center justify-between px-3.5 py-3.5 text-sm text-stone-300">
+                    <span>{item.title}</span>
+                    <span className="text-amber-200">★★★★★</span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          ) : null}
         </section>
 
         <section id="duvidas" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
