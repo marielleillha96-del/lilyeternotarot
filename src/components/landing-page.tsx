@@ -345,8 +345,8 @@ function ServiceModal({
   const message = `Olá! Quero consultar a leitura "${service.title}" no Eterno Tarot.`;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-end justify-center bg-slate-950/85 p-3 backdrop-blur-md sm:items-center sm:p-6">
-      <div className="relative w-full max-w-4xl overflow-hidden rounded-[28px] border border-amber-300/15 bg-[#0f0a18] shadow-[0_30px_120px_rgba(0,0,0,0.65)]">
+    <div className="fixed inset-0 z-[60] flex items-start justify-center overflow-y-auto bg-slate-950/85 p-3 backdrop-blur-md sm:items-center sm:p-6">
+      <div className="relative w-full max-w-4xl overflow-hidden rounded-[28px] border border-amber-300/15 bg-[#0f0a18] shadow-[0_30px_120px_rgba(0,0,0,0.65)] sm:max-h-[calc(100dvh-3rem)] sm:overflow-y-auto">
         <button
           type="button"
           onClick={onClose}
@@ -474,12 +474,9 @@ function TestimonialModal({
   if (!testimonial) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/92 p-4 backdrop-blur-md"
-      onClick={onClose}
-    >
+    <div className="fixed inset-0 z-[70] flex items-start justify-center overflow-y-auto bg-slate-950/92 p-4 backdrop-blur-md sm:items-center" onClick={onClose}>
       <div
-        className="relative w-full max-w-4xl overflow-hidden rounded-[28px] border border-white/10 bg-[#0f0a18] shadow-[0_30px_120px_rgba(0,0,0,0.7)]"
+        className="relative w-full max-w-4xl overflow-hidden rounded-[28px] border border-white/10 bg-[#0f0a18] shadow-[0_30px_120px_rgba(0,0,0,0.7)] sm:max-h-[calc(100dvh-2rem)] sm:overflow-y-auto"
         onClick={(event) => event.stopPropagation()}
       >
         <button
