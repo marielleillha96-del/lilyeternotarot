@@ -559,7 +559,6 @@ export default function LandingPage({
   const [activeTestimonial, setActiveTestimonial] = useState<Testimonial | null>(null);
   const [showMoreServices, setShowMoreServices] = useState(false);
   const [showMoreTestimonials, setShowMoreTestimonials] = useState(false);
-  const [showMobileSummaries, setShowMobileSummaries] = useState(true);
 
   const testimonialCards = testimonials.slice(0, 4);
   const extraTestimonials = testimonials.slice(4);
@@ -662,22 +661,8 @@ export default function LandingPage({
                 key={service.id}
                 service={service}
                 onOpen={setActiveService}
-                showSummary={showMobileSummaries}
               />
             ))}
-          </div>
-
-          <div className="mt-6 flex justify-center sm:hidden">
-            <button
-              type="button"
-              className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/8"
-              onClick={() => setShowMobileSummaries((value) => !value)}
-              aria-expanded={showMobileSummaries}
-              aria-controls="mobile-card-summaries"
-            >
-              {showMobileSummaries ? 'Ocultar descrições' : 'Ver mais descrições'}
-              <Icon name="arrow" className={`h-4 w-4 transition ${showMobileSummaries ? 'rotate-90' : 'rotate-90'}`} />
-            </button>
           </div>
 
           {extraServices.length ? (
@@ -702,7 +687,6 @@ export default function LandingPage({
                   key={service.id}
                   service={service}
                   onOpen={setActiveService}
-                  showSummary={showMobileSummaries}
                 />
               ))}
             </div>
