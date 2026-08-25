@@ -284,15 +284,13 @@ function ServiceCard({
           </div>
         </div>
         <div className="space-y-2 p-2 sm:p-3">
-          <div className="flex items-start justify-between gap-2 sm:hidden">
-            <h3 className="font-display text-[15px] leading-[1.05] text-white">{service.title}</h3>
-            <span className="shrink-0 rounded-full bg-amber-300 px-3 py-1 text-[11px] font-extrabold text-slate-950">
-              {cardPrice}
-            </span>
-          </div>
+          <h3 className="font-display text-[15px] leading-[1.05] text-white sm:hidden">{service.title}</h3>
           <p className="text-[11px] leading-5 text-stone-200/82 sm:hidden">
             {service.summary}
           </p>
+          <span className="inline-flex rounded-full bg-amber-300 px-3 py-1 text-[11px] font-extrabold text-slate-950 sm:hidden">
+            {cardPrice}
+          </span>
           <div className="hidden flex-wrap gap-1.5 sm:flex">
             {service.includes.slice(0, 2).map((item) => (
               <span
