@@ -27,8 +27,7 @@ export const site = {
   name: 'ETERNO TAROT',
   shortName: 'Eterno Tarot',
   tagline: 'As respostas que você procura podem estar nas cartas.',
-  description:
-    'Landing page premium para o Eterno Tarot, com consultas online, leitura personalizada, foco em conversão e experiência mobile first.',
+  description: 'Consultas online e leitura personalizada de tarot.',
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   canonicalPath: '/',
   heroImage:

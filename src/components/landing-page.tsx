@@ -255,7 +255,7 @@ function ServiceCard({
         data-service-name={service.title}
         data-price={service.prices[0]?.value || ''}
       >
-        <div className="relative aspect-[4/5] overflow-hidden">
+        <div className="relative aspect-[4/4.7] overflow-hidden">
           <Image
             src={service.image}
             alt={service.title}
@@ -270,25 +270,25 @@ function ServiceCard({
           <div className="absolute bottom-3 left-3 right-3 space-y-1.5">
             <div className="flex items-end justify-between gap-2">
               <h3 className="max-w-[66%] font-display text-[15px] leading-[1.02] text-white md:text-[17px]">{service.title}</h3>
-              <span className="shrink-0 rounded-full bg-amber-300 px-3 py-1.5 text-[11px] font-extrabold text-slate-950 shadow-[0_10px_24px_rgba(214,174,71,0.18)]">
+              <span className="shrink-0 rounded-full bg-amber-300 px-3.5 py-1.5 text-[12px] font-extrabold text-slate-950 shadow-[0_10px_24px_rgba(214,174,71,0.18)] md:text-[13px]">
                 {cardPrice}
               </span>
             </div>
             <p
-              className={`max-w-[92%] text-[12px] leading-5 text-stone-200/82 ${
-                showSummary ? 'line-clamp-1' : 'hidden sm:line-clamp-1 sm:block'
+              className={`max-w-[92%] text-[12px] leading-5 text-stone-200/82 md:text-[13px] ${
+                showSummary ? 'line-clamp-2' : 'hidden sm:line-clamp-2 sm:block'
               }`}
             >
               {service.summary}
             </p>
           </div>
         </div>
-        <div className="space-y-2 p-3">
+        <div className="space-y-2 p-2.5">
           <div className="flex flex-wrap gap-1.5">
             {service.includes.slice(0, 2).map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[9px] text-stone-300"
+                className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[9px] text-stone-300 md:text-[10px]"
               >
                 {item}
               </span>
@@ -551,7 +551,7 @@ export default function LandingPage({
   const [activeService, setActiveService] = useState<ActiveService>(null);
   const [activeTestimonial, setActiveTestimonial] = useState<Testimonial | null>(null);
   const [showMoreServices, setShowMoreServices] = useState(false);
-  const [showMobileSummaries, setShowMobileSummaries] = useState(false);
+  const [showMobileSummaries, setShowMobileSummaries] = useState(true);
 
   const testimonialCards = testimonials.slice(0, 8);
   const featuredServices = services.slice(0, 8);
