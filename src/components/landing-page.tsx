@@ -634,12 +634,17 @@ export default function LandingPage({
                       sizes="(max-width: 1024px) 100vw, 45vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
-                    <div className="absolute inset-x-3 bottom-3 rounded-[22px] border border-white/10 bg-slate-950/80 p-4 backdrop-blur-xl sm:inset-x-4 sm:bottom-4 sm:p-5">
+                    <div className="absolute inset-x-3 bottom-3 hidden rounded-[22px] border border-white/10 bg-slate-950/80 p-4 backdrop-blur-xl sm:inset-x-4 sm:bottom-4 sm:block sm:p-5">
                       <p className="font-display text-lg leading-tight text-white sm:text-xl">
                         Eu sou a Lily, tenho 25 anos, trabalho com a cartomancia há mais de 2 anos trazendo resultados e direcionamento através das cartas.
                       </p>
                     </div>
                   </div>
+                </div>
+                <div className="rounded-[24px] border border-white/10 bg-slate-950/80 p-4 backdrop-blur-xl sm:hidden">
+                  <p className="font-display text-base leading-snug text-white">
+                    Eu sou a Lily, tenho 25 anos, trabalho com a cartomancia há mais de 2 anos trazendo resultados e direcionamento através das cartas.
+                  </p>
                 </div>
               </div>
             </div>
