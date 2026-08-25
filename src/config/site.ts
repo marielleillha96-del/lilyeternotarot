@@ -42,8 +42,8 @@ export const site = {
     'https://lh3.googleusercontent.com/LMY7gTBxBsJkLtpdrTPj2lMxNfQsCb3FTFH9UCqTBX7WSHBz4hVinaaQxnW-xBzuRobQ9NmYqlrWbkmyT9fzSOh3gynOKkdLmw',
   contact: {
     phone: '(11) 96120 8468',
-    whatsapp: '(11) 96322 1753',
-    whatsappLink: 'https://wa.me/5511963221753',
+    whatsapp: '(11) 96120 8468',
+    whatsappLink: 'https://wa.me/5511961208468',
     email: '',
   },
   schedule: 'Ter a sex, das 16h às 21h',
