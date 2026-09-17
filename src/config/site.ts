@@ -1,4 +1,5 @@
 import newMethodsData from './new-methods.json';
+import removedMethodIds from './removed-methods.json';
 
 export type ServicePrice = {
   label: string;
@@ -532,11 +533,10 @@ const newMethods: Service[] = newMethodsData.map((method) => ({
 export const site = {
   ...baseSite,
   services: [
-    ...baseSite.services.map((service) =>
-      newMethods.find((method) => method.id === service.id) ?? service,
-    ),
-    ...newMethods.filter((method) =>
-      !baseSite.services.some((service) => service.id === method.id),
+    ...newMethods,
+    ...baseSite.services.filter((service) =>
+      !removedMethodIds.includes(service.id) &&
+      !newMethods.some((method) => method.id === service.id),
     ),
   ],
 };
