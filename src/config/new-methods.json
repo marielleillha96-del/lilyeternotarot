@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ja-me-superou",
+    "slug": "ja-me-superou",
+    "title": "Já me superou?",
+    "category": "Amor",
+    "image": "/novos-metodos/e8aed3ee-99d0-4192-8f8c-76733e009e79.jpeg",
+    "summary": "Ideal para quem busca clareza após um afastamento ou deseja compreender melhor uma conexão que ainda desperta dúvidas.",
+    "includes": ["Ainda pensa em mim?", "Existe apego?", "Energia atual.", "Sentimentos.", "Possibilidade de contato.", "Atitude.", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 60,00" }]
+  },
+  {
+    "id": "cama-do-prazer",
+    "slug": "cama-do-prazer",
+    "title": "Cama do prazer",
+    "category": "Sexualidade",
+    "image": "/novos-metodos/266eb543-9930-44ea-833f-23335b6396af.jpeg",
+    "summary": "Apresentada como uma leitura sobre a vida sexual e a relação consigo e com outras pessoas.",
+    "includes": ["Como está sua vida sexual?", "Como melhorar?", "O que saber sobre minha sexualidade?", "Relação com meu corpo.", "Relação com o corpo do próximo.", "Como superar bloqueios sexuais?", "Perspectiva futura sexual.", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 69,00" }]
+  },
+  {
+    "id": "atracao",
+    "slug": "atracao",
+    "title": "Atração",
+    "category": "Amor",
+    "image": "/novos-metodos/1b69cedd-c824-459c-84a2-63c3904056dd.jpeg",
+    "summary": "Tiragem direcionada a pessoas que percebem a repetição de padrões tóxicos em seus relacionamentos.",
+    "includes": ["Por que atraio sempre o mesmo padrão?", "Existe um carma para esse tipo?", "Como quebrar tal padrão?", "Conselho para a próxima relação."],
+    "prices": [{ "label": "Valor", "value": "R$ 45,00" }]
+  },
+  {
+    "id": "coracao-vazio",
+    "slug": "coracao-vazio",
+    "title": "Coração vazio",
+    "category": "Amor",
+    "image": "/novos-metodos/713c37ca-7bdf-4ec7-aaa6-5174348852e4.jpeg",
+    "summary": "Propõe uma autoavaliação antes de buscar um novo amor, considerando experiências anteriores, emoções e expectativas.",
+    "includes": ["Como foi a experiência afetiva no passado?", "Como está meu emocional agora?", "O que desejo de uma relação afetiva?", "O que realmente preciso da relação?", "O que posso oferecer do meu amor?", "Possibilidade de um romance em breve.", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 65,00" }]
+  },
+  {
+    "id": "eremita",
+    "slug": "eremita",
+    "title": "Eremita",
+    "category": "Autoconhecimento",
+    "image": "/novos-metodos/c3583bd1-b2b5-4086-9d02-0f9c129ef0c3.jpeg",
+    "summary": "Aborda um círculo social fechado e as possíveis razões para ter poucos amigos.",
+    "includes": ["Razão de haver poucos amigos.", "O que te impede de socializar?", "Gostaria de conhecer mais pessoas?", "Qualidade para ser mais sociável.", "O que evitar para conquistar amigos?", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 60,00" }]
+  },
+  {
+    "id": "inseguranca",
+    "slug": "inseguranca",
+    "title": "Insegurança",
+    "category": "Autoconhecimento",
+    "image": "/novos-metodos/34d8bbbd-1cba-4734-ac46-6ed5ac5d49ed.jpeg",
+    "summary": "Propõe uma análise da insegurança em situações afetivas, profissionais ou de outras áreas da vida.",
+    "includes": ["Por que sou inseguro?", "Como ter mais segurança?", "Ponto fraco.", "Ponto forte.", "Qual postura evitar?", "Qual postura adotar?", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 65,00" }]
+  },
+  {
+    "id": "limpeza-energetica",
+    "slug": "limpeza-energetica",
+    "title": "Limpeza energética",
+    "category": "Espiritual",
+    "image": "/novos-metodos/cd1ff1a1-6f60-424e-b75d-b720b9bc86c6.jpeg",
+    "summary": "Apresentada como uma leitura para quem deseja se reconectar consigo, liberar pesos emocionais e buscar mais harmonia em sua jornada.",
+    "includes": ["Energia.", "Fonte de desgaste.", "O que precisa liberar?", "Restaurando o equilíbrio.", "Mensagem final."],
+    "prices": [{ "label": "Valor", "value": "R$ 57,00" }]
+  },
+  {
+    "id": "meu-pet",
+    "slug": "meu-pet",
+    "title": "Meu pet",
+    "category": "Pets",
+    "image": "/novos-metodos/c1f77e49-2325-4576-ac85-289e499cb949.jpeg",
+    "summary": "Voltada a quem está pensando em receber um novo animal de estimação, abordando sua adaptação e a receptividade do lar.",
+    "includes": ["O pet se adaptará?", "Todos do lar receberão bem?", "Vai demorar para adaptar?", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 27,00" }]
+  },
+  {
+    "id": "minha-intuicao",
+    "slug": "minha-intuicao",
+    "title": "Minha intuição",
+    "category": "Espiritual",
+    "image": "/novos-metodos/7c1df25a-0009-4d05-a6d5-2aafd78f4907.jpeg",
+    "summary": "Leitura de autoconhecimento para quem deseja se conectar mais profundamente com sua essência e compreender melhor a própria jornada.",
+    "includes": ["Estado da intuição.", "Bloqueios.", "Pontos fortes.", "Como fortalecer?", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 55,00" }]
+  },
+  {
+    "id": "olho-gordo",
+    "slug": "olho-gordo",
+    "title": "Olho gordo",
+    "category": "Espiritual",
+    "image": "/novos-metodos/448b9342-1756-4522-bfa2-b8b57ed7ac8b.jpeg",
+    "summary": "Apresentada como uma tiragem sobre proteção e a influência de energias negativas.",
+    "includes": ["Tenho proteção?", "Como a negatividade me afeta?", "Por que atraio energia negativa?", "Como deter?", "Conselhos."],
+    "prices": [{ "label": "Valor", "value": "R$ 50,00" }]
+  },
+  {
+    "id": "guia-espiritual",
+    "slug": "guia-espiritual",
+    "title": "Guia espiritual",
+    "category": "Espiritual",
+    "image": "/novos-metodos/873fd59e-4e87-4ca4-ab63-2c6fac43c038.jpeg",
+    "summary": "Apresentada como uma leitura para se conectar com o guia espiritual.",
+    "includes": ["Qual arcano tem a energia do meu guia?", "Como me conectar?", "Como me protege?", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 45,00" }]
+  },
+  {
+    "id": "templo-de-fobos",
+    "slug": "templo-de-fobos",
+    "title": "Templo de Fobos",
+    "category": "Autoconhecimento",
+    "image": "/novos-metodos/b2ce95a2-ec8d-4618-a4bd-e6c656aec45e.jpeg",
+    "summary": "Tiragem voltada à descoberta dos próprios medos, às limitações e às possibilidades de enfrentamento.",
+    "includes": ["Meus medos.", "Como enfrentá-los.", "Suas limitações.", "Como superá-las.", "Onde esse caminho me levará?", "Conselho."],
+    "prices": [{ "label": "Valor", "value": "R$ 75,00" }]
+  }
+]

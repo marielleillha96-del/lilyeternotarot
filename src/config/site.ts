@@ -1,3 +1,5 @@
+import newMethodsData from './new-methods.json';
+
 export type ServicePrice = {
   label: string;
   value: string;
@@ -23,7 +25,7 @@ export type Testimonial = {
   image: string;
 };
 
-export const site = {
+const baseSite = {
   name: 'ETERNO TAROT',
   shortName: 'Eterno Tarot',
   tagline: 'As respostas que você procura podem estar nas cartas.',
@@ -521,6 +523,23 @@ export const site = {
     },
   ],
 } as const;
+
+const newMethods: Service[] = newMethodsData.map((method) => ({
+  ...method,
+  details: method.summary,
+}));
+
+export const site = {
+  ...baseSite,
+  services: [
+    ...baseSite.services.map((service) =>
+      newMethods.find((method) => method.id === service.id) ?? service,
+    ),
+    ...newMethods.filter((method) =>
+      !baseSite.services.some((service) => service.id === method.id),
+    ),
+  ],
+};
 
 export function sanitizePhone(phone: string) {
   return phone.replace(/\D/g, '');
